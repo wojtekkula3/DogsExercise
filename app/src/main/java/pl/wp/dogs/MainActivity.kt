@@ -1,18 +1,24 @@
 package pl.wp.dogs
 
 import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import dagger.hilt.android.AndroidEntryPoint
-import pl.wp.dogs.breeds_list.BreedsListStarter
-import javax.inject.Inject
+import pl.wp.dogs.common.navigation.AppNavigation
+import pl.wp.dogs.common.theme.WpDogsAppTheme
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    @Inject
-    lateinit var breedsListStarter: BreedsListStarter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        breedsListStarter.start(supportFragmentManager)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
+        setContent {
+            WpDogsAppTheme {
+                AppNavigation()
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-package pl.wp.dogs.breed_details
+package pl.wp.dogs.presentation.breed_details
 
 import android.os.Bundle
 import android.view.Gravity

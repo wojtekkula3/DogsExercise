@@ -1,8 +1,25 @@
-# Zadanie rekrutacyjne
+# 🐕 Dogs exercise
 
-Aplikacja wyświetla listę ras psów pobranych z REST API. Po tapnięciu w nazwę rasy, otwiera ekran z nazwą rasy.
-Moduł listy ras `breeds_list` jest zaimplementowany w architekturze wzorowanej na VIPER.
+This application displays a list of dog breeds fetched from a REST API. When a breed name is tapped, it opens a screen with
+the breed name.
 
-1. Dokonaj migracji modułu `breeds_list` do architektury MVVM, z wykorzystaniem Jetpack Compose w warstwie UI.
-2. Dodaj kilka testów.
-3. Dokonaj dowolnych refaktoryzacji, które pomogą wyjść na przeciw potencjalnym zmianom wymagań biznesowych w przyszłości.
+### Features
+
+- Fetches and displays a list of dog breeds from a REST API.
+- Opens a detailed screen with the breed name when a breed is selected.
+
+### Architecture
+
+- The `breeds_list` module is implemented using the **MVVM** architecture with Jetpack Compose for the UI layer.
+- The `breed_details` module has Fragment to show that Compose and Fragments can live side by side.
+
+### Setup
+
+1. Clone the repository.
+2. Open the project in Android Studio.
+3. Build the project to download dependencies and set up the environment.
+
+### Refactoring
+
+The `breeds_list` module was at first structured according to **VIPER** architecture and has been refactored to use the
+**MVVM** architecture to better accommodate potential future business requirement changes.
